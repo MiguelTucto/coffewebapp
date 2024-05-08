@@ -10,7 +10,7 @@ const Hero = () => {
 
     return (
         <>
-            <Image src={'https://i.postimg.cc/Jh4B8D2p/cacaofull.jpg'} fill={true} alt={'Cacao Hero Image'} className={'w-full md:h-full h-fit object-cover object-center absolute' }/>
+            <Image src={'https://i.postimg.cc/Jh4B8D2p/cacaofull.jpg'} width={1000} height={10000} alt={'Cacao Hero Image'} className={'w-full h-full object-cover object-center absolute' }/>
             <div className={'absolute md:px-[200px] px-[50px]'}>
                 <nav className={'w-full flex justify-between items-center  '}>
                     <Link href={'#'} className={'content-center'}>

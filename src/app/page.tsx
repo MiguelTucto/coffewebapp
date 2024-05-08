@@ -9,7 +9,7 @@ import Footer from "@/sections/footer";
 export default function Home() {
     return(
         <>
-            <section className={'min-h-screen'}>
+            <section className={'min-h-screen relative'}>
                 <Hero/>
             </section>
             <section className={'md:h-[500px] h-[200px]'}>
@@ -32,6 +32,7 @@ export default function Home() {
             </section>
             {
                 /*
+
 
 
 
