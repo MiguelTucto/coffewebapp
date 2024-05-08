@@ -6,9 +6,9 @@ import Image from "next/image";
 const Category = () => {
     return (
         <>
-            <div className={'text-center'}>
-                <h2 className={' text-8xl font-bold text-amber-900 '}>Nuestro Chocolates</h2>
-                <div className={'flex flex-row w-full justify-between px-[200px] mt-20'}>
+            <div className={'text-center md:pt-20 pt-10'}>
+                <h2 className={'md:text-8xl text-5xl font-bold text-amber-900 '}>Nuestro Chocolates</h2>
+                <div className={'flex md:flex-row flex-col gap-5 w-full justify-between md:px-[200px] px-[50px] md:pt-20 pt-3.5'}>
                     <div
                         className="max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
                         <a href="#">

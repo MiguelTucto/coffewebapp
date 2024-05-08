@@ -12,7 +12,7 @@ export default function Home() {
             <section className={'min-h-screen'}>
                 <Hero/>
             </section>
-            <section className={'h-[500px]'}>
+            <section className={'md:h-[500px] h-[200px]'}>
                 <Product/>
             </section>
             <section className={'min-h-screen'}>
@@ -28,8 +28,18 @@ export default function Home() {
                 <Form/>
             </section>
             <section className={'h-[300px] bg-gradient-to-l from-amber-700 to-amber-200'} id={'footer'}>
-                <Footer />
+                <Footer/>
             </section>
+            {
+                /*
+
+
+
+
+
+                 */
+            }
+
         </>
     )
 }

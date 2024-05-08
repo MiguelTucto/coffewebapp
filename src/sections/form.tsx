@@ -6,8 +6,8 @@ import Image from "next/image";
 const Form = () => {
     return (
         <>
-            <div className={'grid grid-cols-2 px-[200px] pt-36 pb-20'}>
-                <div className={''}>
+            <div className={'grid grid-cols-2 md:px-[200px] px-[50px] pt-6 pb-20'}>
+                <div className={'md:block hidden'}>
                     <div className="grid grid-cols-3 gap-1   ">
                         <div className="col-span-2 ">
                             <Image src={'https://i.postimg.cc/yYLfDXv0/firstchocolateproduct.jpg'} width={1000} height={300} alt={'Making Chocolates'}
@@ -40,12 +40,12 @@ const Form = () => {
                     </div>
                 </div>
 
-                <div className={'ml-20'}>
-                    <h2 className={' text-8xl font-bold text-amber-900'}>Compra Chocolates Goyito</h2>
-                    <p className={'text-xl font-sans  mt-10'}>
+                <div className={'md:ml-20 ml-0 md:col-span-1 col-span-2'}>
+                    <h2 className={'md:text-8xl text-5xl font-bold text-amber-900'}>Compra Chocolates Goyito</h2>
+                    <p className={'md:text-xl text-xs font-sans  md:mt-10 mt-5'}>
                         Completa el formulario y nos pondremos en contacto contigo en la brevedad.
                     </p>
-                    <form className={'p-10 mt-10 bg-white border border-gray-200 rounded-lg shadow'}>
+                    <form className={'p-10 md:mt-10 mt-5     bg-white border border-gray-200 rounded-lg shadow w-full'}>
                         <div className={'w-full'}>
                             <label htmlFor="name" className="block text-xl font-medium text-gray-700">Nombre</label>
                             <input type="text" name="name"
@@ -86,16 +86,13 @@ const Form = () => {
                             </div>
                             <div className={'md:mt-0 mt-6'}>
                                 <label htmlFor="typeOfShows" className="block text-xl font-medium text-gray-700">Tipo de
-                                    Evento</label>
+                                    Chocolate</label>
                                 <select id="typeOfShows"
                                         name="typeOfShows" autoComplete="typeOfShows"
                                         className="mt-1 focus:ring-amber-600 focus:border-amber-600 block w-full shadow-sm sm:text-sm border-gray-300 border   rounded">
-                                    <option value="Cumpleaños">Cumpleaños</option>
-                                    <option value="Matrimonio">Matrimonio</option>
-                                    <option value="Misa">Misa</option>
-                                    <option value="Sorpresas">Sorpresas</option>
-                                    <option value="Serenata">Serenata</option>
-                                    <option value="Otros">Otros</option>
+                                    <option value="Cumpleaños">Chocolate con Maní</option>
+                                    <option value="Matrimonio">Chocolate con Ajonjolí</option>
+                                    <option value="Misa">Chocolate</option>
                                 </select>
 
                             </div>
