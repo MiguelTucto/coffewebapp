@@ -10,31 +10,31 @@ const Form = () => {
                 <div className={''}>
                     <div className="grid grid-cols-3 gap-1   ">
                         <div className="col-span-2 ">
-                            <Image src={FirstChocolateProduct} alt={'Making Chocolates'}
+                            <Image src={'https://i.postimg.cc/yYLfDXv0/firstchocolateproduct.jpg'} width={1000} height={300} alt={'Making Chocolates'}
                                    className={'w-full h-[300px] object-cover'}/>
                         </div>
                         <div className="">
-                            <Image src={SecondChocolateProduct} alt={'Making Chocolates'}
+                            <Image src={'https://i.postimg.cc/mgGrFCk2/secondchocolateproduct.jpg'} width={1000} height={300} alt={'Making Chocolates'}
                                    className={'w-full h-[300px] object-cover'}/>
                         </div>
                         <div className="">
-                            <Image src={ThirdChocolateProduct} alt={'Making Chocolates'}
+                            <Image src={'https://i.postimg.cc/43sbwYLX/thirdchocolateproduct.jpg'} width={1000} height={300} alt={'Making Chocolates'}
                                    className={'w-full h-full object-cover'}/>
                         </div>
                         <div className="">
-                            <Image src={FirstChocolateProduct} alt={'Making Chocolates'}
+                            <Image src={'https://i.postimg.cc/yYLfDXv0/firstchocolateproduct.jpg'} width={1000} height={300} alt={'Making Chocolates'}
                                    className={'w-full h-full object-cover'}/>
                         </div>
                         <div className="">
-                            <Image src={SecondChocolateProduct} alt={'Making Chocolates'}
+                            <Image src={'https://i.postimg.cc/mgGrFCk2/secondchocolateproduct.jpg'} width={1000} height={300} alt={'Making Chocolates'}
                                    className={'w-full h-full object-cover'}/>
                         </div>
                         <div className="col-span-2 ">
-                            <Image src={ThirdChocolateProduct} alt={'Making Chocolates'}
+                            <Image src={'https://i.postimg.cc/43sbwYLX/thirdchocolateproduct.jpg'} width={1000} height={300} alt={'Making Chocolates'}
                                    className={'w-full h-[300px] object-cover'}/>
                         </div>
                         <div className="">
-                            <Image src={FirstChocolateProduct} alt={'Making Chocolates'}
+                            <Image src={'https://i.postimg.cc/yYLfDXv0/firstchocolateproduct.jpg'} width={1000} height={300} alt={'Making Chocolates'}
                                    className={'w-full h-[300px] object-cover'}/>
                         </div>
                     </div>

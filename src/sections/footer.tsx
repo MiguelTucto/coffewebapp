@@ -10,7 +10,7 @@ const Footer = () => {
             <div
                 className={'md:px-80 px-10 md:py-0 py-5  h-full flex md:flex-row flex-col justify-between items-center'}>
                 <Link href={'#'}>
-                    <Image src={GoyoLogo} alt={'Goyo'} />
+                    <Image src={'https://i.postimg.cc/tJQV6rBg/goyitologo.png'} width={190} height={200} alt={'Goyo'} />
                 </Link>
                 <div className={'flex '}>
                     <p className={'text-black font-black'}>© 2024 Goyo Chocolate.</p>

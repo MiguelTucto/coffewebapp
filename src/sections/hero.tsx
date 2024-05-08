@@ -5,11 +5,11 @@ import Link from "next/link";
 const Hero = () => {
     return (
         <>
-            <Image src={CacaoHeroImage} alt={'Cacao Hero Image'} className={'w-full h-full object-cover object-center absolute' }/>
+            <Image src={'https://i.postimg.cc/Jh4B8D2p/cacaofull.jpg'} fill={true} alt={'Cacao Hero Image'} className={'w-full h-full object-cover object-center absolute' }/>
             <div className={'absolute px-[200px]'}>
                 <nav className={'w-full flex justify-between items-center  '}>
                     <Link href={'#'}>
-                        <Image src={GoyoLogo} alt={'Logo of Chocolate Goyito'} className={'w-auto h-auto'}/>
+                        <Image src={'https://i.postimg.cc/tJQV6rBg/goyitologo.png'} width={100} height={100} alt={'Logo of Chocolate Goyito'} className={'w-auto h-auto'}/>
                     </Link>
                     <div className={`flex gap-5`}>
                         <Link href={'#'}

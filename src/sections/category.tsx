@@ -12,7 +12,7 @@ const Category = () => {
                     <div
                         className="max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
                         <a href="#">
-                            <Image src={FirstChocolateProduct} alt={'Photo of Cacao and Fruits'}/>
+                            <Image src={'https://i.postimg.cc/yYLfDXv0/firstchocolateproduct.jpg'} height={750} width={450} alt={'Photo of Cacao and Fruits'}/>
                         </a>
                         <div className="p-5">
                             <a href="#">
@@ -30,7 +30,7 @@ const Category = () => {
                     <div
                         className="max-w-sm bg-white border border-gray-200 rounded-lg shadow flex justify-between flex-col">
                         <a href="#">
-                            <Image src={SecondChocolateProduct} alt={'Photo of Cacao and Fruits'} height={800}/>
+                            <Image src={'https://i.postimg.cc/mgGrFCk2/secondchocolateproduct.jpg'} alt={'Photo of Cacao and Fruits'} height={750} width={450}/>
                         </a>
                         <div className="p-5">
                             <a href="#">
@@ -48,7 +48,7 @@ const Category = () => {
                     <div
                         className="max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
                         <a href="#">
-                            <Image src={ThirdChocolateProduct} alt={'Photo of Cacao and Fruits'}/>
+                            <Image src={'https://i.postimg.cc/43sbwYLX/thirdchocolateproduct.jpg'} alt={'Photo of Cacao and Fruits'} height={750} width={450}/>
                         </a>
                         <div className="p-5">
                             <a href="#">

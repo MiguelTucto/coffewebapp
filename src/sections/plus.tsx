@@ -6,7 +6,7 @@ const Plus = () => {
         <>
             <div className={'px-[200px] pt-36 flex flex-row justify-between'}>
                 <div>
-                    <Image src={FabricWithHuman} alt={'Photo of Cacao on Fabric'} height={750}/>
+                    <Image src={'https://i.postimg.cc/Y2V86qQs/cacaofabricwithhuman.jpg'} height={750} width={450} alt={'Photo of Cacao on Fabric'} />
                 </div>
                 <div className={'w-[650px]'}>
                     <h2 className={' text-8xl font-bold text-amber-900'}>¿Qué nos diferencia?</h2>

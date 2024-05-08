@@ -22,7 +22,7 @@ const About = () => {
                     </button>
                 </div>
                 <div>
-                    <Image src={CacaoAndFruits} alt={'Photo of Cacao and Fruits'}/>
+                    <Image src={'https://i.postimg.cc/3RtJDc6g/cacaoandfruits.jpg'} height={750} width={450} alt={'Photo of Cacao and Fruits'}/>
                 </div>
 
             </div>
