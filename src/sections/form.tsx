@@ -1,7 +1,10 @@
+"use client";
+
 import FirstChocolateProduct from "../../public/images/firstchocolateproduct.jpg";
 import SecondChocolateProduct from "../../public/images/secondchocolateproduct.jpg";
 import ThirdChocolateProduct from "../../public/images/thirdchocolateproduct.jpg";
 import Image from "next/image";
+import {createChocolateRequest} from "@/lib/actions";
 
 const Form = () => {
     return (
@@ -45,11 +48,11 @@ const Form = () => {
                     <p className={'md:text-xl text-xs font-sans  md:mt-10 mt-5'}>
                         Completa el formulario y nos pondremos en contacto contigo en la brevedad.
                     </p>
-                    <form className={'p-10 md:mt-10 mt-5     bg-white border border-gray-200 rounded-lg shadow w-full'}>
+                    <form action={createChocolateRequest} className={'p-10 md:mt-10 mt-5 bg-white border border-gray-200 rounded-lg shadow w-full'}>
                         <div className={'w-full'}>
-                            <label htmlFor="name" className="block text-xl font-medium text-gray-700">Nombre</label>
-                            <input type="text" name="name"
-                                   id="name" autoComplete="given-name"
+                            <label htmlFor="fullName" className="block text-xl font-medium text-gray-700">Nombre Completo</label>
+                            <input type="text" name="fullName"
+                                   id="fullName"
                                    className="mt-1 focus:ring-amber-600 focus:border-amber-600 block w-full shadow-sm sm:text-sm border-gray-300 border   rounded"/>
 
                         </div>
@@ -85,10 +88,10 @@ const Form = () => {
                                        className="mt-1 focus:ring-amber-600 focus:border-amber-600 block w-full shadow-sm sm:text-sm border-gray-300 border   rounded"/>
                             </div>
                             <div className={'md:mt-0 mt-6'}>
-                                <label htmlFor="typeOfShows" className="block text-xl font-medium text-gray-700">Tipo de
+                                <label htmlFor="typeOfChocolate" className="block text-xl font-medium text-gray-700">Tipo de
                                     Chocolate</label>
-                                <select id="typeOfShows"
-                                        name="typeOfShows" autoComplete="typeOfShows"
+                                <select id="typeOfChocolate"
+                                        name="typeOfChocolate" autoComplete="typeOfChocolate"
                                         className="mt-1 focus:ring-amber-600 focus:border-amber-600 block w-full shadow-sm sm:text-sm border-gray-300 border   rounded">
                                     <option value="Cumpleaños">Chocolate con Maní</option>
                                     <option value="Matrimonio">Chocolate con Ajonjolí</option>
