@@ -74,7 +74,7 @@ const Hero = () => {
                         en el Perú y en el mundo. Prueba todas nuestras fabulosas presentaciones.</p>
                     <button
                         className={' mt-10 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-amber-800 hover:bg-amber-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-800 disabled:bg-blue-100 disabled:cursor-not-allowed '}>
-                        Ver Video
+                        Comprar Chocolates
                     </button>
                 </div>
             </div>
