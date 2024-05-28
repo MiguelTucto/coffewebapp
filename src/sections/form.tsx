@@ -38,7 +38,7 @@ const Form = () => {
         setIsFormValid(isValid);
     }, [formValues]);
 
-    const onSubmit = async (data: formData) => {
+    const onSubmit = async (data: typeof formData) => {
         setIsLoading(true);
         const formData = new FormData();
         for (const key in data) {
