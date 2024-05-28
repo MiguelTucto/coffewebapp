@@ -30,16 +30,6 @@ export default function Home() {
             <section className={'h-[300px] bg-gradient-to-l from-amber-700 to-amber-200'} id={'footer'}>
                 <Footer/>
             </section>
-            {
-                /*
-
-
-
-
-
-
-                 */
-            }
 
         </>
     )

@@ -21,6 +21,9 @@ const RequestChocolateSchema = new Schema({
     },
     time: {
         type: String
+    },
+    quantityOfChocolate: {
+        type: String
     }
 })
 

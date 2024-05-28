@@ -10,11 +10,11 @@ const Hero = () => {
 
     return (
         <>
-            <Image src={'https://i.postimg.cc/Jh4B8D2p/cacaofull.jpg'} width={1000} height={10000} alt={'Cacao Hero Image'} className={'w-full h-full object-cover object-center absolute' }/>
+            <Image src={'https://i.postimg.cc/X7nV925L/cacaofullv2.jpg'} fill={true} alt={'Cacao Hero Image'} className={'w-full h-full object-cover absolute brightness-50' }/>
             <div className={'absolute md:px-[200px] px-[50px]'}>
                 <nav className={'w-full flex justify-between items-center  '}>
                     <Link href={'#'} className={'content-center'}>
-                        <Image src={'https://i.postimg.cc/tJQV6rBg/goyitologo.png'} width={100} height={100}
+                        <Image src={'https://i.postimg.cc/bNy1MKrW/goyitologov2.png'} width={130} height={130}
                                alt={'Logo of Chocolate Goyito'} className={'w-auto h-auto'}/>
                     </Link>
                     <div className={` gap-5 md:flex hidden ` }>
