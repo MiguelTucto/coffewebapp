@@ -23,7 +23,7 @@ const schema = z.object({
 });
 
 const Form = () => {
-    const { register, handleSubmit, formState: { errors }, watch, reset } = useForm({
+    const { register, handleSubmit, formState: { errors }, watch, reset } = useForm<FormData>({
         resolver: zodResolver(schema)
     });
 
@@ -42,7 +42,7 @@ const Form = () => {
         setIsLoading(true);
         const formData = new FormData();
         for (const key in data) {
-            formData.append(key, data[key as keyof FormData]);
+            formData.append(key, data[key as keyof FormData] as string);
         }
         try {
             await createChocolateRequest(formData);
@@ -101,34 +101,26 @@ const Form = () => {
                 <div className="md:ml-20 ml-0 md:col-span-1 col-span-2">
                     <h2 className="md:text-8xl text-5xl font-bold text-amber-900">Compra Chocolates Goyito</h2>
                     <p className="md:text-xl text-xs font-sans md:mt-10 mt-5">
-                        Completa el formulario y nos pondremos en contacto contigo en la brevedad.
+                    Completa el formulario y nos pondremos en contacto contigo en la brevedad.
                     </p>
-                    {isSubmitted && <div
-                        className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4"
-                        role="alert">
+                    {isSubmitted && <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
                         <strong className="font-bold">¡Éxito!</strong>
                         <span className="block sm:inline"> Tu solicitud ha sido enviada correctamente.</span>
                     </div>}
-                    <form onSubmit={handleSubmit(onSubmit)}
-                          className="p-10 md:mt-10 mt-5 bg-white border border-gray-200 rounded-lg shadow-xl space-y-6">
+                    <form onSubmit={handleSubmit(onSubmit)} className="p-10 md:mt-10 mt-5 bg-white border border-gray-200 rounded-lg shadow-xl space-y-6">
                         <div className="w-full">
-                            <label htmlFor="fullName" className="block text-xl font-medium text-gray-700">Nombre
-                                Completo</label>
-                            <input type="text" {...register('fullName')} id="fullName"
-                                   className="mt-1 focus:ring-amber-600 focus:border-amber-600 block w-full shadow-sm sm:text-sm border-gray-300 border rounded"/>
+                            <label htmlFor="fullName" className="block text-xl font-medium text-gray-700">Nombre Completo</label>
+                            <input type="text" {...register('fullName')} id="fullName" className="mt-1 focus:ring-amber-600 focus:border-amber-600 block w-full shadow-sm sm:text-sm border-gray-300 border rounded" />
                             {errors.fullName && <p className="text-red-500">{errors.fullName.message}</p>}
                         </div>
                         <div className="w-full">
                             <label htmlFor="email" className="block text-xl font-medium text-gray-700">Correo</label>
-                            <input type="email" {...register('email')} id="email" autoComplete="email"
-                                   className="mt-1 focus:ring-amber-600 focus:border-amber-600 block w-full shadow-sm sm:text-sm border-gray-300 border rounded"/>
+                            <input type="email" {...register('email')} id="email" autoComplete="email" className="mt-1 focus:ring-amber-600 focus:border-amber-600 block w-full shadow-sm sm:text-sm border-gray-300 border rounded" />
                             {errors.email && <p className="text-red-500">{errors.email.message}</p>}
                         </div>
                         <div className="w-full">
-                            <label htmlFor="location"
-                                   className="block text-xl font-medium text-gray-700">Dirección</label>
-                            <input type="text" {...register('location')} id="location" autoComplete="location"
-                                   className="mt-1 focus:ring-amber-600 focus:border-amber-600 block w-full shadow-sm sm:text-sm border-gray-300 border rounded" />
+                            <label htmlFor="location" className="block text-xl font-medium text-gray-700">Dirección</label>
+                            <input type="text" {...register('location')} id="location" autoComplete="location" className="mt-1 focus:ring-amber-600 focus:border-amber-600 block w-full shadow-sm sm:text-sm border-gray-300 border rounded" />
                             {errors.location && <p className="text-red-500">{errors.location.message}</p>}
                         </div>
                         <div className="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 w-full">
