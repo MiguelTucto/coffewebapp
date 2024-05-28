@@ -41,8 +41,8 @@ const Form = () => {
     const onSubmit: SubmitHandler<FormData> = async (data) => {
         setIsLoading(true);
         const formData = new FormData();
-        Object.entries(data).forEach(([key, value]) => {
-            formData.append(key, value as string);
+        (Object.entries(data) as [keyof FormData, string][]).forEach(([key, value]) => {
+            formData.append(key, value);
         });
         try {
             await createChocolateRequest(formData);
@@ -60,40 +60,14 @@ const Form = () => {
             <div className="grid grid-cols-2 md:px-[200px] px-[50px] md:pt-[200px] pt-6 pb-20 bg-gradient-to-r from-yellow-100 to-yellow-200">
                 <div className="hidden md:block">
                     <div className="grid grid-cols-3 gap-1">
-                        <div className="col-span-2 ">
-                            <Image src={'https://i.postimg.cc/yYLfDXv0/firstchocolateproduct.jpg'} width={1000}
-                                   height={300} alt={'Making Chocolates'}
-                                   className={'w-full h-[300px] object-cover'}/>
+                        <div className="col-span-2">
+                            <Image src={FirstChocolateProduct} width={1000} height={300} alt="Making Chocolates" className="w-full h-[300px] object-cover rounded-lg shadow-lg" />
                         </div>
-                        <div className="">
-                            <Image src={'https://i.postimg.cc/mgGrFCk2/secondchocolateproduct.jpg'} width={1000}
-                                   height={300} alt={'Making Chocolates'}
-                                   className={'w-full h-[300px] object-cover'}/>
+                        <div>
+                            <Image src={SecondChocolateProduct} width={1000} height={300} alt="Making Chocolates" className="w-full h-[300px] object-cover rounded-lg shadow-lg" />
                         </div>
-                        <div className="">
-                            <Image src={'https://i.postimg.cc/43sbwYLX/thirdchocolateproduct.jpg'} width={1000}
-                                   height={300} alt={'Making Chocolates'}
-                                   className={'w-full h-full object-cover'}/>
-                        </div>
-                        <div className="">
-                            <Image src={'https://i.postimg.cc/yYLfDXv0/firstchocolateproduct.jpg'} width={1000}
-                                   height={300} alt={'Making Chocolates'}
-                                   className={'w-full h-full object-cover'}/>
-                        </div>
-                        <div className="">
-                            <Image src={'https://i.postimg.cc/mgGrFCk2/secondchocolateproduct.jpg'} width={1000}
-                                   height={300} alt={'Making Chocolates'}
-                                   className={'w-full h-full object-cover'}/>
-                        </div>
-                        <div className="col-span-2 ">
-                            <Image src={'https://i.postimg.cc/43sbwYLX/thirdchocolateproduct.jpg'} width={1000}
-                                   height={300} alt={'Making Chocolates'}
-                                   className={'w-full h-[300px] object-cover'}/>
-                        </div>
-                        <div className="">
-                            <Image src={'https://i.postimg.cc/yYLfDXv0/firstchocolateproduct.jpg'} width={1000}
-                                   height={300} alt={'Making Chocolates'}
-                                   className={'w-full h-[300px] object-cover'}/>
+                        <div>
+                            <Image src={ThirdChocolateProduct} width={1000} height={300} alt="Making Chocolates" className="w-full h-full object-cover rounded-lg shadow-lg" />
                         </div>
                     </div>
                 </div>
@@ -103,32 +77,24 @@ const Form = () => {
                     <p className="md:text-xl text-xs font-sans md:mt-10 mt-5">
                         Completa el formulario y nos pondremos en contacto contigo en la brevedad.
                     </p>
-                    {isSubmitted && <div
-                        className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4"
-                        role="alert">
+                    {isSubmitted && <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
                         <strong className="font-bold">¡Éxito!</strong>
                         <span className="block sm:inline"> Tu solicitud ha sido enviada correctamente.</span>
                     </div>}
-                    <form onSubmit={handleSubmit(onSubmit)}
-                          className="p-10 md:mt-10 mt-5 bg-white border border-gray-200 rounded-lg shadow-xl space-y-6">
+                    <form onSubmit={handleSubmit(onSubmit)} className="p-10 md:mt-10 mt-5 bg-white border border-gray-200 rounded-lg shadow-xl space-y-6">
                         <div className="w-full">
-                            <label htmlFor="fullName" className="block text-xl font-medium text-gray-700">Nombre
-                                Completo</label>
-                            <input type="text" {...register('fullName')} id="fullName"
-                                   className="mt-1 focus:ring-amber-600 focus:border-amber-600 block w-full shadow-sm sm:text-sm border-gray-300 border rounded"/>
+                            <label htmlFor="fullName" className="block text-xl font-medium text-gray-700">Nombre Completo</label>
+                            <input type="text" {...register('fullName')} id="fullName" className="mt-1 focus:ring-amber-600 focus:border-amber-600 block w-full shadow-sm sm:text-sm border-gray-300 border rounded" />
                             {errors.fullName && <p className="text-red-500">{errors.fullName.message}</p>}
                         </div>
                         <div className="w-full">
                             <label htmlFor="email" className="block text-xl font-medium text-gray-700">Correo</label>
-                            <input type="email" {...register('email')} id="email" autoComplete="email"
-                                   className="mt-1 focus:ring-amber-600 focus:border-amber-600 block w-full shadow-sm sm:text-sm border-gray-300 border rounded"/>
+                            <input type="email" {...register('email')} id="email" autoComplete="email" className="mt-1 focus:ring-amber-600 focus:border-amber-600 block w-full shadow-sm sm:text-sm border-gray-300 border rounded" />
                             {errors.email && <p className="text-red-500">{errors.email.message}</p>}
                         </div>
                         <div className="w-full">
-                            <label htmlFor="location"
-                                   className="block text-xl font-medium text-gray-700">Dirección</label>
-                            <input type="text" {...register('location')} id="location" autoComplete="location"
-                                   className="mt-1 focus:ring-amber-600 focus:border-amber-600 block w-full shadow-sm sm:text-sm border-gray-300 border rounded" />
+                            <label htmlFor="location" className="block text-xl font-medium text-gray-700">Dirección</label>
+                            <input type="text" {...register('location')} id="location" autoComplete="location" className="mt-1 focus:ring-amber-600 focus:border-amber-600 block w-full shadow-sm sm:text-sm border-gray-300 border rounded" />
                             {errors.location && <p className="text-red-500">{errors.location.message}</p>}
                         </div>
                         <div className="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 w-full">
