@@ -42,7 +42,7 @@ const Form = () => {
         setIsLoading(true);
         const formData = new FormData();
         for (const key in data) {
-            formData.append(key, data[key]);
+            formData.append(key, data[key as keyof FormData]);
         }
         try {
             await createChocolateRequest(formData);
